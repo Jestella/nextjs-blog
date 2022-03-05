@@ -18,7 +18,7 @@
   font-size: 1.5rem;
   line-height: 1.4;
   margin: 1rem 0;
-  color: #5463ff;
+  color: #b1e74c;
 }
 
 .headingMd {
@@ -48,6 +48,15 @@
   margin: 0 0 1.25rem;
 }
 
-.lightText {
+.dateText {
+  font-size: 14px;
   color: #666;
+}
+
+.whiteText {
+  color: #fff;
+}
+
+.blackBg {
+  background-color: #000;
 }

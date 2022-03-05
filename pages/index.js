@@ -4,7 +4,6 @@ import Date from '../components/date';
 import Image from 'next/image';
 import Head from 'next/head';
 import { getSortedPostsData } from '../lib/posts';
-
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 
@@ -19,37 +18,40 @@ export default function Home({ allPostsData }) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
-        <link rel='icon' href='./logo.ico' />
+        <link rel='icon' href='./logos/logo.ico' />
       </Head>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Intro</h2>
+        <h2 className={utilStyles.headingLg}>Hello :)</h2>
         <p>
           {' '}
-          Welcome to my blog. This website is built with Next.js. If you are
-          interested in my other project, please visit my{' '}
-          <a href='https://stella-lee.com '>portfolio website</a>.
+          Blog. is built with Next.js. <br />
+          Please visit my{' '}
+          <a href='https://stella-lee.com' target='_blank'>
+            portfolio website
+          </a>{' '}
+          for more projects.
         </p>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title, intro }) => (
+          {allPostsData.map(({ id, date, title, preview }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
 
               <br />
-              <small className={utilStyles.lightText}>
+              <small className={utilStyles.dateText}>
                 <Date dateString={date} />
               </small>
-              <p>{intro}</p>
+              <p>{preview}...</p>
             </li>
           ))}
         </ul>
 
         <Image
           src='/images/logo4.png'
-          height={400}
-          width={400}
+          height={540}
+          width={540}
           alt='sample logo'
         />
         <div>
