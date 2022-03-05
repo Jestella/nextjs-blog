@@ -3,18 +3,20 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Navbar from './navbar';
+import Footer from './footer';
 
 const name = 'Stella Lee';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'Blog + Next.js';
 
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/logo.ico' />
         <meta
           name='description'
-          content='Learn how to build a personal website using Next.js'
+          content='a personal website built with Next.js'
         />
         <meta
           property='og:image'
@@ -26,6 +28,7 @@ export default function Layout({ children, home }) {
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
 
+      <Navbar />
       <header className={styles.header}>
         {home ? (
           <>
@@ -69,6 +72,7 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

@@ -13,8 +13,12 @@ body {
 }
 
 a {
-  color: #ffad32;
+  color: #f1a261;
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 a:hover {
@@ -24,4 +28,8 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+.colorOrange {
+  color: #ff9f45;
 }
